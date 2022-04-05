@@ -32,7 +32,7 @@ export default function Nav() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className={"bg-inherit inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-gradient-to-t hover:from-white hover:to-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"}
+              className={(isOpen?"bg-gradient-to-t from-white to-grey-300 rounded-md": " ")+" inline-flex items-center justify-center p-2 rounded-md text-gray-300"}// hover:text-white hover:bg-gradient-to-t hover:from-white hover:to-gray-300 "}//focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"}
               aria-controls="mobile-menu"
               aria-expanded="false"
             >

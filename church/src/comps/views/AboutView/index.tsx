@@ -13,7 +13,7 @@ export default function AboutView() {
   }, [])
   return (
     <div>
-      <div id='aboutContent' className='flex flex-col items-center justify-center pt-8 md:px-32 sm:px-32 px-12'>
+      <div id='aboutContent' className='flex flex-col items-center justify-center space-y-5 pt-8 md:px-32 sm:px-32 px-12'>
         <Vision/>
         <Mission/>
         <Values />
