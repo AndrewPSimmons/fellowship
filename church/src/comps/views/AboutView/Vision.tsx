@@ -16,13 +16,13 @@ export default function Vision() {
     <div className='flex flex-col items-center text-center'>
       <h1 className='text-4xl'><b className='font-medium'>Vision</b>:  {d.vision.question}?</h1>
       <Verse verse={d.vision.verse} verseRef={d.vision.verseRef} />
-      {d.vision.texts.map((text, i)=>{
+      {d.vision.texts.map((text, i) => {
         return <p className='text-xl' key={i}>{text}:</p>
       })}
       <ul className='flex flex-col list-disc items-start'>
-      {d.vision.text1bullets.map((bullet, i)=>{
-        return <li className='list-item' key={i}>{bullet}</li>
-      })}
+        {d.vision.text1bullets.map((bullet, i) => {
+          return <li className='list-item' key={i}>{bullet}</li>
+        })}
       </ul>
     </div>
   )

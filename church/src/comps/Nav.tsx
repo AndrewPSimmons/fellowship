@@ -10,29 +10,30 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false)
   // const width = useViewport().width
   return (
-    <nav className="bg-gradient-to-b from-white via-gray-100 to-gray-300">
+    //animate-slideInFromTop bg-gradient-to-b from-white via-gray-100 to-gray-300 
+    <nav className=" bg-gradient-to-b from-white via-gray-100 to-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex flex-row items-center sm:justify-between w-full">
-            <div className="flex-shrink-0">
+        <div className="flex items-center justify-around h-16">
+          <div className="flex flex-row items-center sm:justify-around w-[70%]">
+            <div className="">
               <Link to="/" className='flex flex-col justify-center align-center'>
-                <LogoText width="175px" height="" />
+                <div onClick={()=>setIsOpen(false)}><LogoText width="175px" height="" /></div>
               </Link>
             </div>
             <div className='flex w-full flex-row justify-center'>
-            <div className=' text-black hidden sm:flex flex-row justify-between'>
-              {routes.map((route, i) => {
-                if (!route.inNav) { return }
-                return <NavItem key={i} to={route.path} label={route.label} classes="py-2" />
-              })}
-            </div>
+              <div className=' text-black hidden sm:flex flex-row justify-between'>
+                {routes.map((route, i) => {
+                  if (!route.inNav) { return }
+                  return <NavItem key={i} to={route.path} label={route.label} classes="py-2" />
+                })}
+              </div>
             </div>
           </div>
           <div className="-mr-2 flex sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className={(isOpen?"bg-gradient-to-t from-white to-grey-300 rounded-md": " ")+" inline-flex items-center justify-center p-2 rounded-md text-gray-300"}// hover:text-white hover:bg-gradient-to-t hover:from-white hover:to-gray-300 "}//focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"}
+              className={(isOpen ? "bg-gradient-to-t from-white to-grey-300 rounded-md" : " ") + " inline-flex items-center justify-center p-2 rounded-md text-gray-300"}// hover:text-white hover:bg-gradient-to-t hover:from-white hover:to-gray-300 "}//focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"}
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -95,7 +96,7 @@ export default function Nav() {
               </a> */}
               {routes.map((route, i) => {
                 if (!route.inNav) { return }
-                return <NavItem key={i} to={route.path} label={route.label} classes="hover:bg-gray-500 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium" />
+                return <div onClick={()=>{setIsOpen(false)}}><NavItem key={i} to={route.path} label={route.label} classes="hover:bg-gray-500 hover:text-white text-black block px-3 py-2 rounded-md text-base font-medium" /></div>
               })}
 
             </div>

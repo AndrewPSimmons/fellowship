@@ -1,5 +1,14 @@
+import FacebookLink from "./comps/socialLinks/FacebookLink"
+import InstagramLink from "./comps/socialLinks/InstagramLink"
+import YoutubeLink from "./comps/socialLinks/YoutubeLink"
+
+
 const d = {
   address: "7501 Muncaster Mill Road, Gaithersburg, Maryland 20877",
+  addressShort: "7501 Muncaster Mill Road",
+  email: {
+    connect: "connect@fellowshipmd.church"
+  },
   socials: {
     emails: {
       contact: "connect@fellowshipmd.church"
@@ -84,7 +93,115 @@ const d = {
   homeView: {
     visionStatement: "Preach the Gospel. Make Disciples",
   },
-
+  connectView: {
+    connections: [
+      {
+        title: "Church Center",
+        info: {
+          type: "link",
+          value: "church center link",
+          href: "https://fellowshipchurchmd.churchcenter.com"
+        },
+        bullets: [
+          'This is our primary form of communication for our members',
+          'Add “Fellowship Church” to your Church Center account to stay in the loop, access our event calendar, give electronically…and share prayer requests!'
+        ]
+      },
+      {
+        title: "Address",
+        info: {
+          type: "text",
+          value: "7501 Muncaster Mill Road, Gaithersburg, Maryland 20877"
+        },
+        bullets: [
+          'Our current meeting place is at Covenant Life Church. We meet in the Spurgeon room above the main lobby. After entering the building, take the stairs immediately to your right. Just follow our signs!'
+        ]
+      },
+      {
+        title: "Email",
+        info: {
+          type: "text",
+          value: "connect@fellowshipmd.church"
+        },
+        bullets: []
+      },
+      // {
+      //   title: "Number",
+      //   info: {
+      //     type: "text",
+      //     value: "555-555-5555"
+      //   },
+      //   bullets: ['coming soon']
+      // },
+      {
+        title: "Facebook",
+        info: {
+          type: "comp",
+          value: <FacebookLink width={50}/>
+        },
+        bullets: [
+          'Our primary social media hub for the general public',
+          'This is where we share photos, general announcements, and live streams'
+        ]
+      },
+      {
+        title: "YouTube",
+        info: {
+          type: "comp",
+          value: <YoutubeLink width={50}/>
+        },
+        bullets: [
+          'Our video repository for sermons and such',
+        ]
+      },
+      {
+        title: "Instagram",
+        info: {
+          type: "comp",
+          value: <InstagramLink width={50}/>
+        },
+        bullets: [
+          'Another hub for photos, announcements, and videos',
+        ]
+      },
+    ]
+  }
 }
 
+/* 
+
+Church Center: Link
+
+This is our primary form of communication for our members
+
+Add “Fellowship Church” to your Church Center account to stay in the loop, access our event calendar, give electronically…and share prayer requests!
+
+
+Address: 7501 Muncaster Mill Road, Gaithersburg, Maryland 20877
+
+Our current meeting place is at Covenant Life Church. We meet in the Spurgeon room above the main lobby. After entering the building, take the stairs immediately to your right. Just follow our signs!
+
+
+Email: connect@fellowshipmd.church
+
+
+Number: 123-456-7890 (Coming soon!)
+
+
+Facebook: facebook.com/fellowshipchurchmd
+
+Our primary social media hub for the general public
+
+This is where we share photos, general announcements, and live streams
+
+
+YouTube: youtube.com/channel/UC9l9Gk14Uy1OzuLZJT1hb9A
+
+Our video repository for sermons and such
+
+
+Instagram: @fellowshipchurchmd
+
+Another hub for photos, announcements, and videos
+*/
 export default d

@@ -1,7 +1,3 @@
-import React from 'react'
+import Giving from "./Giving";
 
-export default function GivingView() {
-  return (
-    <div>GivingView</div>
-  )
-}
+export default Giving

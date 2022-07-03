@@ -10,21 +10,19 @@ import Nav from './comps/Nav';
 import NotFoundView from './comps/views/NowFoundView';
 import d from './d';
 
-const dContext:any = React.createContext(d)
+const dContext: any = React.createContext(d)
 function App() {
   return (
     <dContext.Provider value={dContext}>
-      <div className="App">
-        <Router>
-          <Nav />
-          <Routes>
-            {routes.map((route, i) => {
-              return <Route key={i} path={route.path} element={<route.comp />} />
-            })}
-            {/* <Route path="*" element={<NotFoundView/>}/> */}
-          </Routes>
-        </Router>
-      </div>
+      <Router>
+        <Nav />
+        <Routes>
+          {routes.map((route, i) => {
+            return <Route key={i} path={route.path} element={<route.comp />} />
+          })}
+          {/* <Route path="*" element={<NotFoundView/>}/> */}
+        </Routes>
+      </Router>
 
     </dContext.Provider>
   );

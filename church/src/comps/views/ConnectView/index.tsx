@@ -1,8 +1,3 @@
-import React from 'react'
+import Connect from "./Connect";
 
-export default function ConnectView() {
-  return (
-    <div>ConnectView</div>
-  )
-}
-  
+export default Connect
